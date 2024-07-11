@@ -4,102 +4,39 @@
 
 using namespace std;
 
-/*enum level {
-    low,
-    medium,
-    high
-};*/
+int plusFunction (int x, int y) {
+    return x * y;
+}
 
+double plussFunction ( double x, double y) {
+    return x + y;
+}
+//--------------------------------------------------------
 
-void myFunction(int myNumber[5]) {
-    for(int i = 0; i < 5; i++) {
-        cout << myNumber[i] << "\n";
+int recursion ( int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    else {
+    return n + recursion (n - 1);
     }
 }
 
-/*void swapNums(int &x, int &y) {
-    int z = x;
-    x = y;
-    y = z;
-}*/
-
 
 int main() {
-    int myNumber [5] = {3, 5, 7, 8, 10};
-    myFunction(myNumber);
+
+
+    int number;
+    cout << "Type the number which we need to calculate: " << "\n";
+    cin >> number;
+    cout << "The number you just type is " << number << " is " << recursion(number) << "\n";
     return 0;
-    
-    /*int firstsum = 20;
-    int secondsum = 30;
 
-    cout << "Sums before swap" << "\n";
-    cout << firstsum << secondsum << "\n";
+//-----------------------------------------------------------
 
-    swapNums(firstsum, secondsum);
+    int intNumber = plusFunction (9, 32);
+    double doubleNumber = plussFunction (99, 2);
 
-    cout << "After swaping" << "\n";
-
-    cout << firstsum << secondsum << "\n";*/
-
-
-
-
-/*enum level myVar = medium;
-
-switch (myVar) {
-    case 0:
-    cout << "You Chose" << myVar;
-    break;
-    case 1:
-    cout << "Choose " << myVar;
-    break;
-    case 2:
-    cout << "Choooseee" << myVar;
-    break;
-}
-return 0;*/
-
-int numbers[5] = {23,37,24,15,86};
-for (int i = 0; i < sizeof(numbers) / sizeof(int); i++) {
-    cout << numbers[i] << "\n";
-}
-
-//----------------------------------------------------------------------------
-
-
-struct {
-    string brand;
-    string country;
-    int year;
-}myStruct1, myStruct2;
-
-myStruct1.brand = "Honda";
-myStruct1.country = "Canada";
-myStruct1.year = 2018;
-
-cout << myStruct1.brand << " " << myStruct1.country << " " << myStruct1.year << "\n";
-
-
-myStruct2.brand = "Toyota";
-myStruct2.country = "USA";
-myStruct2.year = 2024;
-
-cout << myStruct2.brand << "\n";
-cout << myStruct2.country << "\n";
-cout << myStruct2.year << "\n";
-
-//-------------------------------------------------------------------------------------
-
-string food = "Mazda";
-string &morning = food;
-string* name = &food;
-
-cout << food << "\n";
-cout << &morning << "\n";
-cout << name << "\n";
-
-*name = "Canada";
-
-cout << *name << "\n";
-
+    cout << "The number of integer is: " << intNumber << "\n";
+    cout << "The number of double is: " << doubleNumber << "\n";
 }
