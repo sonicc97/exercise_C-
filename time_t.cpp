@@ -36,7 +36,7 @@ struct tm datetime = *localtime(&timestamp);
 
 cout << datetime.tm_hour;
 
-
+---------------------------------------------------------------------------
 
   struct tm datetime;
   time_t timestamp;
