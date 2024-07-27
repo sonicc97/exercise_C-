@@ -29,7 +29,8 @@ cout << output << "\n";
 strftime(output, 50, "%a %b %e %H:%M:%S %Y", &datetime);
 cout << output << "\n";
 
-/*
+---------------------------------------------------------------------------
+
 time_t timestamp = time(&timestamp);
 struct tm datetime = *localtime(&timestamp);
 
@@ -56,7 +57,7 @@ cout << datetime.tm_hour;
   timestamp = mktime(&datetime);
 
   cout << ctime(&timestamp);
-  */
+
 }
 
 
